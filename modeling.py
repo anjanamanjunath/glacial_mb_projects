@@ -16,7 +16,7 @@ import os
 from sklearn import ensemble
 
 
-all_data = pd.read_csv('/Users/anjanamanjunath/Desktop/classwork/STAT 254 project/data/all_data.csv', index_col=['rgi_id', 'period'])
+all_data = pd.read_csv('/**/data/all_data.csv', index_col=['rgi_id', 'period'])
 
 # setting up test/train split
 g_idx = np.unique(all_data.index.get_level_values(0).values)
@@ -26,7 +26,7 @@ g_train, g_test = train_test_split(g_idx, train_size=0.2,test_size=0.8)
 train_df = all_data.loc[g_train]
 test_df = all_data.loc[g_test]
 
-testing_df = test_df.to_csv('/Users/anjanamanjunath/Desktop/classwork/STAT 254 project/data/df_test.csv')
+testing_df = test_df.to_csv('/**/data/df_test.csv')
 
 g_idx = np.unique(train_df.index.get_level_values(0).values)
 
