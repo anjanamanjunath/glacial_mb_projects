@@ -1,0 +1,5 @@
+To do: 
+
+- Fix seasonal splitting function
+- Add PyTorch version of the model
+- Add Jupyter NB for demoing functions and model
