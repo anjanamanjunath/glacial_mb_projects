@@ -55,7 +55,7 @@ class Sequencer(Dataset):
     def __len__(self): 
         return self.data.shape[0]
     
-    def __getitem__(self, i): 
+    def __getnext__(self, i): 
         if i >= self.seq_length - 1:
             i0 = i - self.seq_length + 1
             next_X = self.X[i0:(i+1), :]
